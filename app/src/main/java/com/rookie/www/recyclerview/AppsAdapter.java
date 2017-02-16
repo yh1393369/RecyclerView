@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -34,9 +35,21 @@ public class AppsAdapter extends RecyclerView.Adapter<AppsAdapter.AppsViewHolder
     }
 
     @Override
-    public AppsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AppsViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
-        AppsViewHolder viewHolder = new AppsViewHolder(view);
+        final AppsViewHolder viewHolder = new AppsViewHolder(view);
+        ((ImageView)view.findViewById(R.id.ivApp)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(parent.getContext(), "点击图片" + apps.get(viewHolder.getAdapterPosition()).getAppName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        ((TextView)view.findViewById(R.id.tvAppName)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(parent.getContext(), "点击文字" + apps.get(viewHolder.getAdapterPosition()).getAppName(), Toast.LENGTH_SHORT).show();
+            }
+        });
         return viewHolder;
     }
 
