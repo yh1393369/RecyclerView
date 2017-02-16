@@ -1,4 +1,4 @@
-package com.rookie.www.recyclerviewtest;
+package com.rookie.www.recyclerview;
 
 /**
  * Created by Hi on 2017/2/16.

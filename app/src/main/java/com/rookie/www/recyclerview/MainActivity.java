@@ -1,4 +1,4 @@
-package com.rookie.www.recyclerviewtest;
+package com.rookie.www.recyclerview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.rookie.www.recyclerviewtest;
+package com.rookie.www.recyclerview;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

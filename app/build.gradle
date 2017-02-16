@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.rookie.www.recyclerviewtest"
+        applicationId "com.rookie.www.recyclerview"
         minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
