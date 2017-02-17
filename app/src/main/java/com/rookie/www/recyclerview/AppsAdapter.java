@@ -38,13 +38,13 @@ public class AppsAdapter extends RecyclerView.Adapter<AppsAdapter.AppsViewHolder
     public AppsViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
         final AppsViewHolder viewHolder = new AppsViewHolder(view);
-        ((ImageView)view.findViewById(R.id.ivApp)).setOnClickListener(new View.OnClickListener() {
+        viewHolder.ivApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(parent.getContext(), "点击图片" + apps.get(viewHolder.getAdapterPosition()).getAppName(), Toast.LENGTH_SHORT).show();
             }
         });
-        ((TextView)view.findViewById(R.id.tvAppName)).setOnClickListener(new View.OnClickListener() {
+        viewHolder.tvAppName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(parent.getContext(), "点击文字" + apps.get(viewHolder.getAdapterPosition()).getAppName(), Toast.LENGTH_SHORT).show();
